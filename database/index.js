@@ -47,7 +47,7 @@ var displayTeamMembers = function(callback, photo, name, about) {
 
 var insertInfo = function(name, gender, lived, currlocation, age, callback) {
   connection.query(
-    "INSERT INTO chatBoxData (name, gender, lived, currlocation, age) VALUES (?, ?, ?, ?, ?)",
+    "INSERT INTO  chatBoxData (name, gender, lived, currlocation, age) VALUES (?, ?, ?, ?, ?)",
     [name, gender, lived, currlocation, age],
     (err, results, fields) => {
       if (err) {

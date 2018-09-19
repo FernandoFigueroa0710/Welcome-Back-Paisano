@@ -37,7 +37,7 @@ app.get("/about", function(req, res) {
     }
   });
 });
-app.get("/learnMore", function(req, res) {
+/*app.get("/learnMore", function(req, res) {
   database.selectInfo((err, results) => {
     if (err) {
       res.sendStatus(500);
@@ -45,24 +45,21 @@ app.get("/learnMore", function(req, res) {
       res.status(200).json(results);
     }
   });
-});
+});*/
 app.post("/learnMore", function(req, res) {
   let name = req.body.name;
   let gender = req.body.gender;
   let lived = req.body.lived;
   let currlocation = req.body.currlocation;
   let age = req.body.age !== undefined ? parseInt(req.body.age) : 1;
-  if (!name && !gender && !lived && !currlocation && !age) {
+  if (!name) {
     res.sendStatus(400);
   } else {
-    database.insertInfo(name, gender, lived, currlocation, age, function(
-      err,
-      data
-    ) {
+    database.insertInfo(name, gender, lived, currlocation, age, (err, results) =>{
       if (err) {
         res.sendStatus(500);
       } else {
-        res.json(data);
+        res.json(results);
       }
     });
   }

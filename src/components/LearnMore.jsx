@@ -23,11 +23,11 @@ class Review extends Component {
     const { name, gender, lived, currlocation, age } = this.state;
     axios
       .post("/learnMore", {
-        name,
-        gender,
-        lived,
-        currlocation,
-        age
+        name: `${name.value}`,
+        gender: `${gender.value}`,
+        lived: `${lived.value}`,
+        currlocation: `${currlocation.value}`,
+        age: `${age.value}`
       })
       .then(res => console.log(res))
       .catch(err => {
@@ -219,7 +219,7 @@ class SimpleForm extends Component {
                 trigger: "update-gender"
               },
               {
-                value: "live",
+                value: "lived",
                 label: "Lived",
                 trigger: "update-lived"
               },
