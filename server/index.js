@@ -37,15 +37,6 @@ app.get("/about", function(req, res) {
     }
   });
 });
-/*app.get("/learnMore", function(req, res) {
-  database.selectInfo((err, results) => {
-    if (err) {
-      res.sendStatus(500);
-    } else {
-      res.status(200).json(results);
-    }
-  });
-});*/
 app.post("/learnMore", function(req, res) {
   let name = req.body.name;
   let gender = req.body.gender;
@@ -55,13 +46,20 @@ app.post("/learnMore", function(req, res) {
   if (!name) {
     res.sendStatus(400);
   } else {
-    database.insertInfo(name, gender, lived, currlocation, age, (err, results) =>{
-      if (err) {
-        res.sendStatus(500);
-      } else {
-        res.json(results);
+    database.insertInfo(
+      name,
+      gender,
+      lived,
+      currlocation,
+      age,
+      (err, results) => {
+        if (err) {
+          res.sendStatus(500);
+        } else {
+          res.json(results);
+        }
       }
-    });
+    );
   }
 });
 

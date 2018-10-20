@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+rimport React, { Component } from "react";
 import { Grid, Row, Col, Image } from "react-bootstrap";
 import "./About.css";
 import AboutList from "./AboutList.jsx";
