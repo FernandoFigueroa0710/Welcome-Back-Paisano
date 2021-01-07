@@ -5,23 +5,23 @@
   "proxy": "http://localhost:5000",
   "dependencies": {
     "body": "^5.1.0",
-    "body-parser": "^1.18.3",
-    "cors": "^2.8.4",
-    "enzyme-adapter-react-16": "^1.4.0",
-    "express": "^4.16.3",
-    "install": "^0.12.1",
-    "mdbreact": "^4.7.1",
-    "mysql": "^2.16.0",
-    "npm": "^6.4.1",
-    "prop-types": "^15.6.2",
-    "react": "^16.4.2",
-    "react-bootstrap": "^0.32.3",
-    "react-dom": "^16.4.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "express": "^4.17.1",
+    "install": "^0.12.2",
+    "mdbreact": "^4.27.0",
+    "mysql": "^2.18.1",
+    "npm": "^7.3.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.14.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
-    "react-simple-chatbot": "^0.3.7",
-    "react-social-icons": "^3.0.0",
-    "styled-components": "^3.4.6"
+    "react-scripts": "^4.0.1",
+    "react-simple-chatbot": "^0.3.8",
+    "react-social-icons": "^3.1.0",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,6 +30,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.21.1"
   }
 }
